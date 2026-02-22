@@ -22,9 +22,6 @@ export class App implements OnInit{
     this.comidaService.listar().subscribe(dados => {
 
       this.comidas = dados as any[]; // this is not a good practice
-
-      console.log(dados)
-      console.log(this.comidas)
     })
   }
 }

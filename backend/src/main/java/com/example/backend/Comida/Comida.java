@@ -1,5 +1,4 @@
-package com.example.javacardapio.Comida;
-
+package com.example.backend.Comida;
 // imports necessarios
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;

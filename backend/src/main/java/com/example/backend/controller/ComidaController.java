@@ -1,9 +1,9 @@
-package com.example.javacardapio.controller;
+package com.example.backend.controller;
 
 import org.springframework.web.bind.annotation.RestController;
-import com.example.javacardapio.Comida.Comida;
-import com.example.javacardapio.Comida.ComidaRepository;
-import com.example.javacardapio.Comida.ComidaRequestDTO;
+import com.example.backend.Comida.Comida;
+import com.example.backend.Comida.ComidaRepository;
+import com.example.backend.Comida.ComidaRequestDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
-import com.example.javacardapio.Comida.ComidaResponseDTO;
+import com.example.backend.Comida.ComidaResponseDTO;
 
 @RestController
 @RequestMapping("comida")

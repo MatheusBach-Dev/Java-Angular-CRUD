@@ -1,4 +1,4 @@
-package com.example.javacardapio.Comida;
+package com.example.backend.Comida;
 
 public record ComidaResponseDTO(Long id, String title, String image, Integer price) {
     public ComidaResponseDTO(Comida comida){

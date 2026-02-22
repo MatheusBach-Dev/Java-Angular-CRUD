@@ -1,9 +1,48 @@
 .comida-img {
-  width: 200px;
-  height: 200px;
-  /* object-fit: cover; with this the image dont get distorted, but I liked it*/
-  border-radius: 6px;
-  justify-content: center;
-
+  width: 100%;
+  height: 250px;
+  /* controlo o tamanho visual aqui */
+  object-fit: cover;
+  border-radius: 10px;
 }
 
+
+.all-comidas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+/* configuração dos cards */
+.card {
+  background: #9b791ce7;
+  border-radius: 9px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+  padding: 9px;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.add {
+  width: 100PX;
+  height: 50px;
+  /* controlo o tamanho visual aqui */
+  object-fit: cover;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;
+}
+
+.add:hover {
+  transform: translateY(-5px);
+}
