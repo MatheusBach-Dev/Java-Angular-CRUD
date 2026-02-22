@@ -10,12 +10,12 @@ git clone https://github.com/MatheusBach-Dev/Java-Angular-CRUD.git
 
 Initializing the backend
 
-cd backend
-mvn spring-boot:run
+cd backend<br>
+mvn spring-boot:run<br>
 The backend will start on: http://localhost:8080
 
 Initializing the frontend
 
-cd frontend
-ng serve
+cd frontend<br>
+ng serve<br>
 The frontend will start on: http://localhost:4200
