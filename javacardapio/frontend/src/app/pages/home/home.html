@@ -1,0 +1,13 @@
+<button routerLink="/nova">Adicionar Nova Comida</button>
+
+<div>
+  @for (comida of comidas; track comida.id){
+    <!-- @for = loop no angular -->
+    <div>
+      <img [src]="comida.image" alt="comida.title" class="comida-img">
+      <h3>{{ comida.title }}</h3>
+      <p>R$ {{ comida.price }}</p>
+      <button (click)="deletar(comida.id)"> Deletar Comida</button>
+    </div>
+  }
+</div>

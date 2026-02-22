@@ -7,11 +7,11 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
 
 @Table(name = "comida")
 @Entity(name = "comidas")
@@ -19,20 +19,22 @@ import jakarta.persistence.Id;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode (of = "id")
+@EqualsAndHashCode(of = "id")
 
 public class Comida {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
     private Integer price;
     private String title;
-    private String image;
 
-
-    public Comida(ComidaRequestDTO data){
+    public Comida(ComidaRequestDTO data) {
         this.title = data.title();
         this.image = data.image();
         this.price = data.price();
-    }   
+    }
+
+    @Column(columnDefinition = "TEXT")
+    private String image;
 }
