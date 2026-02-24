@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { ComidaService } from '../../services/comida';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-comida-form',
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule],
   templateUrl: './comida-form.html',
   styleUrl: './comida-form.css',
 })
@@ -14,7 +14,8 @@ export class ComidaForm {
 
   constructor(
     private fb: FormBuilder,
-    private comidaService: ComidaService
+    private comidaService: ComidaService,
+    private router: Router
   ) {
     this.form = this.fb.group({
       title: ['', Validators.required],
@@ -24,13 +25,10 @@ export class ComidaForm {
   }
 
   onSubmit() {
-    console.log(this.form.value);
-
     this.comidaService.salvar(this.form.value).subscribe({
       next: (retorno) => {
-        console.log('Comida salva com sucesso!', retorno);
-        this.form.reset(); // limpa o formulario quando for enviado
-        alert("Comida cadastrada com sucesso!") // provavel q esse alerta seja no browser
+        alert("Comida cadastrada com sucesso!")
+        this.router.navigate(['/']);
       },
       error: (err) => {
         console.error('Erro ao salvar comida', err);

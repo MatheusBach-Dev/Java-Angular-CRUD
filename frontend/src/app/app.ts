@@ -17,11 +17,8 @@ export class App implements OnInit{
   constructor(private comidaService: ComidaService){}
 
   ngOnInit(){
-    console.log("ngOnInit rodou"); // conferindo se o ng oninit rodoou para aparecer no console do browser
-
     this.comidaService.listar().subscribe(dados => {
-
-      this.comidas = dados as any[]; // this is not a good practice
+      this.comidas = dados as any[];
     })
   }
 }

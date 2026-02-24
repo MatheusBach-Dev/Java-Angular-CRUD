@@ -6,23 +6,29 @@
   border-radius: 10px;
 }
 
-
 .all-comidas {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 
 /* configuração dos cards */
 .card {
-  background: #9b791ce7;
+  background: #803022c5;
   border-radius: 9px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s ease;
-  padding: 9px;
+  padding: 8px;
   text-align: center;
+  min-height: 410px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card:hover {
@@ -30,19 +36,50 @@
 }
 
 .add {
-  width: 100PX;
-  height: 50px;
-  /* controlo o tamanho visual aqui */
-  object-fit: cover;
-  border-radius: 6px;
-  text-align: center;
+  width: 90px;
+  height: 70px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: transform 0.4s ease;
-  display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;
+  transition: transform 0.4s ease-in-out;
+  background-color: #5C2E24;
+  color: white;
+  border: none;
+  margin: 20px auto;
+  display: block;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .add:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
+}
+
+.titulo-preco {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.add img {
+  width: 65px;
+  height: 60px;
+}
+
+.delfood {
+  background-color: #663429;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: auto;
+  margin: 20px auto;
+
+}
+
+.delfood:hover {
+  background-color: #86482b;
+  transform: translateY(-2px);
 }
