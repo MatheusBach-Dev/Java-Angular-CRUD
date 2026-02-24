@@ -12,7 +12,7 @@ Initializing the backend
 
 cd backend<br>
 mvn spring-boot:run<br>
-The backend will start on: http://localhost:8080
+The backend will start on: http://localhost:8081
 
 Initializing the frontend
 
