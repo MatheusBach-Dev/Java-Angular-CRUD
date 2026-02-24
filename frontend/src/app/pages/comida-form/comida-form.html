@@ -1,10 +1,10 @@
 <p>Adicionar Nova Comida</p>
 
-  <button routerLink="/">Voltar</button>
+<button routerLink="/">Voltar</button>
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-  <input type="text" formControlName="title" placeholder="Nome">
+  <input type="text" formControlName="title" placeholder="Nome" class="titulo-preco">
 
   <input type="number" formControlName="price" placeholder="Preço">
 
