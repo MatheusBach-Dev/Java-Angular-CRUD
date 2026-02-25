@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { ComidaService } from '../../services/comida';
 import { Router, RouterLink } from '@angular/router';
+import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 
 @Component({
   selector: 'app-comida-form',
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink, NgxMaskDirective],
+  providers: [provideNgxMask()],
   templateUrl: './comida-form.html',
   styleUrl: './comida-form.css',
 })
@@ -25,6 +27,12 @@ export class ComidaForm {
   }
 
   onSubmit() {
+    if (this.form.invalid) {
+      alert('Preencha todos os campos!');
+      // so adicionar esse alert para adicionar todos os campos
+      return;
+    }
+
     this.comidaService.salvar(this.form.value).subscribe({
       next: (retorno) => {
         alert("Comida cadastrada com sucesso!")
