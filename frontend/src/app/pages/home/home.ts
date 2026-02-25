@@ -22,7 +22,6 @@ export class Home implements OnInit{
     this.comidaService.listar().subscribe({
       next: (dados) => {
         this.comidas = dados as any[];
-        console.log(dados);
       }
     })
   }
