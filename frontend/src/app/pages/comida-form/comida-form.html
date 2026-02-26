@@ -4,7 +4,7 @@
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <input type="text" formControlName="title" placeholder="Nome da Comida">
-    <input type="text" formControlName="price" placeholder="R$ 0,00" type="text" mask="separator.2" prefix="R$ " thousandSeparator="." decimalMarker="," >
+    <input type="text" formControlName="price" placeholder="R$0,00" type="text" mask="separator.2" prefix="R$ " thousandSeparator="." decimalMarker="," >
     <!-- a linha de cima depois do placeholdr, define uma mascara para os preços -->
     <input type="text" formControlName="image" placeholder="URL da imagem">
     <button type="submit" class="save">Salvar</button>
