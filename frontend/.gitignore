@@ -1,5 +1,10 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
+<<<<<<< HEAD
+=======
+*.exe
+*.zip
+>>>>>>> recuperando
 # Compiled output
 /dist
 /tmp
@@ -7,7 +12,10 @@
 /bazel-out
 
 # Node
+<<<<<<< HEAD
 *.exe
+=======
+>>>>>>> recuperando
 /node_modules
 npm-debug.log
 yarn-error.log
@@ -43,3 +51,19 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
+=======
+
+# Build Angular
+/dist/
+/build/
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+
+#Java angular
+Java-Angular-CRUD.git/
+>>>>>>> recuperando

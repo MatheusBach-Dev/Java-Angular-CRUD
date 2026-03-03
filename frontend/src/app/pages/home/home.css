@@ -64,8 +64,7 @@
   width: 65px;
   height: 60px;
 }
-
-.delfood {
+.botao {
   background-color: #663429;
   color: white;
   cursor: pointer;
@@ -78,7 +77,7 @@
   margin: 20px auto;
 }
 
-.delfood:hover {
+.botao:hover {
   background-color: #86482b;
   transform: translateY(-2px);
 }

@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 import com.example.backend.Comida.ComidaResponseDTO;
+import org.springframework.web.bind.annotation.PutMapping;
+
+// basicamente esse é o CRUD no java backend
 
 @RestController
 @RequestMapping("comida")
@@ -42,5 +45,17 @@ public class ComidaController {
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable Long id) {
         repository.deleteById(id);
+    }
+
+    // aqui é onde é feito o PUT (edição) no codigo
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PutMapping("/{id}")
+    public void atualizar(@PathVariable Long id, @RequestBody ComidaRequestDTO data) {
+        repository.findById(id).ifPresent(comida -> {
+            comida.setTitle(data.title());
+            comida.setImage(data.image());
+            comida.setPrice(data.price());
+            repository.save(comida);
+        });
     }
 }

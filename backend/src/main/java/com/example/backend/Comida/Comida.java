@@ -14,8 +14,8 @@ import jakarta.persistence.Id;
 
 @Table(name = "comida")
 @Entity(name = "comidas")
-@Getter
-@Setter
+@Getter // getters
+@Setter // setters
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
