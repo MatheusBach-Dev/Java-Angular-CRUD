@@ -1,0 +1,14 @@
+<button routerLink="/nova" class="add" title="Adicionar Comida"><img src="/food3.png" alt="Adicionar"></button>
+
+<div class="all-comidas">
+  @for (comida of comidas; track comida.id){
+    <!-- @for = loop no angular -->
+    <div class="card">
+      <img [src]="comida.image" [alt]="comida.title" class="comida-img">
+      <h3 class="titulo-preco">{{ comida.title }}</h3>
+      <p class="titulo-preco">R$ {{ comida.price }}</p>
+      <button class="botao" (click)="deletar(comida.id)">Deletar Comida</button>
+      <button class="botao" routerLink="/comida-edicao" routerLink="/editar/{{comida.id}}">Editar comida</button>
+    </div>
+  }
+</div>
