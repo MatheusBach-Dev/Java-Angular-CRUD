@@ -35,8 +35,10 @@ export class ComidaForm {
 
     const dados = {
       ...this.form.value,
-      price: parseFloat(String(this.form.value.price || '0').replace(',', '.')) // aqui é feito o 
+      price: parseFloat(String(this.form.value.price || '0').replace(',', '.'))
     };
+
+    console.log('Dados enviados:', dados);
 
     this.comidaService.salvar(dados).subscribe({
       next: (retorno) => {
