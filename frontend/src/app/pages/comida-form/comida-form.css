@@ -44,20 +44,3 @@ input {
   background-color: #793d22;
   transform: translateY(-2px);
 }
-
-.voltar {
-  background-color: #5C2E24;
-  color: white;
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  transition: transform 0.3s ease;
-  display: block;
-  margin: 20px auto;
-}
-
-.voltar:hover {
-  transform: translateY(-2px);
-}

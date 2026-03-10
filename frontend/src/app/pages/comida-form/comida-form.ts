@@ -33,7 +33,12 @@ export class ComidaForm {
       return;
     }
 
-    this.comidaService.salvar(this.form.value).subscribe({
+    const dados = {
+      ...this.form.value,
+      price: parseFloat(String(this.form.value.price || '0').replace(',', '.')) // aqui é feito o 
+    };
+
+    this.comidaService.salvar(dados).subscribe({
       next: (retorno) => {
         alert("Comida cadastrada com sucesso!")
         this.router.navigate(['/']);
@@ -55,8 +60,8 @@ export class ComidaForm {
   //       return;
   //     }
   //   }
-  //   const reader = new FileReader(); se quiser usar como aruivo para adicionar
-  //   reader.onload = () => {          nao a URL, é so desmarcar essa parte
+  //   const reader = new FileReader(); // se quiser para add somente arquivos JPEG ou PNG
+  //   reader.onload = () => {          // so desmarcar esse codigo
   //     this.form.patchValue({
   //       image: reader.result as string
   //     });

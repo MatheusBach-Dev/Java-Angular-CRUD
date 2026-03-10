@@ -1,11 +1,12 @@
 import { Component, OnInit} from '@angular/core';
 import { ComidaService } from '../../services/comida';
 import { RouterLink } from '@angular/router';
+import { CurrencyPipe } from '@angular/common';
 
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, CurrencyPipe],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

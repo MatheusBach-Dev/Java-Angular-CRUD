@@ -6,7 +6,8 @@
     <div class="card">
       <img [src]="comida.image" [alt]="comida.title" class="comida-img">
       <h3 class="titulo-preco">{{ comida.title }}</h3>
-      <p class="titulo-preco">R$ {{ comida.price }}</p>
+      <!-- esse 'currency' mostra as casas decimais puxando do back o valor ex: 25,99 e exibe assim -->
+      <p class="titulo-preco">{{ comida.price | currency:'BRL'}}</p>
       <button class="botao" (click)="deletar(comida.id)">Deletar Comida</button>
       <button class="botao" routerLink="/comida-edicao" routerLink="/editar/{{comida.id}}">Editar comida</button>
     </div>
