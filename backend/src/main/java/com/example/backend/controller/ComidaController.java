@@ -46,6 +46,7 @@ public class ComidaController {
     public void deletar(@PathVariable Long id) {
         repository.deleteById(id);
     }
+    
 
     // aqui é onde é feito o PUT (edição) no codigo
     @CrossOrigin(origins = "*", allowedHeaders = "*")

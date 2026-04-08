@@ -30,7 +30,7 @@ export class Home implements OnInit{
   deletar(id: number){
     this.comidaService.deletar(id).subscribe({
       next: (dados) => {
-        console.log('Comida deletada com sucesso!', dados);
+        alert('Deseja realmente deletar esta comida?');
         this.listar(); //atualiza a lista
       },
       error: (erro) => {

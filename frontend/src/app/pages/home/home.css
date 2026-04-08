@@ -15,7 +15,6 @@
   margin: 0 auto;
 }
 
-
 /* configuração dos cards */
 .card {
   background: #803022c5;
@@ -64,6 +63,7 @@
   width: 65px;
   height: 60px;
 }
+
 .botao {
   background-color: #663429;
   color: white;
@@ -80,4 +80,21 @@
 .botao:hover {
   background-color: #86482b;
   transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .all-comidas {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
+  }
+
+  .add {
+    width: 70px;
+    height: 55px;
+  }
+
+  .add img {
+    width: 50px;
+    height: 45px;
+  }
 }
